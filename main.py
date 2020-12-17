@@ -6,7 +6,7 @@ import struct
 print("JD2015 Decryptor by Just Dance Clan")
 codename = input("Codename from tapes: ")
 # dtape decrypting started
-tape = json.loads(str({"__class":"Tape","Clips":[],"TapeClock":0,"TapeBarCount":1,"FreeResourcesAfterPlay":0,"MapName":"","SoundwichEvent":""}).replace("'",'"'))
+tape = {"__class":"Tape","Clips":[],"TapeClock":0,"TapeBarCount":1,"FreeResourcesAfterPlay":0,"MapName":"","SoundwichEvent":""}
 dtapeinput = 'input/' + codename + '_tml_dance.dtape.ckd'
 with open(dtapeinput, 'rb') as a:
     dtape = a.read()
@@ -181,7 +181,7 @@ dtapeclipscount = clipscount
 print("DTape is ready!")
 # dtape decrypting ended
 # ktape decrypting started
-tape = json.loads(str({"__class":"Tape","Clips":[],"TapeClock":0,"TapeBarCount":1,"FreeResourcesAfterPlay":0,"MapName":"","SoundwichEvent":""}).replace("'",'"'))
+tape = {"__class":"Tape","Clips":[],"TapeClock":0,"TapeBarCount":1,"FreeResourcesAfterPlay":0,"MapName":"","SoundwichEvent":""}
 ktapeinput = 'input/' + codename + '_tml_karaoke.ktape.ckd'
 with open(ktapeinput, 'rb') as a:
     ktape = a.read()
