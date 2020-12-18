@@ -269,10 +269,7 @@ while i < markerscount:
     markers.append(marker)
     print("MusicTrack markers ready: " + str(i) + "/" + str(markerscount - 1))
     i += 1
-a += 475
-b += 475
-videostarttime = struct.unpack("!f", bytes.fromhex(musictrack[a:b]))
-finaljson = dict(markers = markers, startbeat = 0, endbeat = markerscount, videostarttime = videostarttime)
+finaljson = dict(markers = markers, startbeat = 0, endbeat = markerscount)
 with open('output/' + codename + '_musictrack.json', "w", encoding='utf-8') as f:
       json.dump(finaljson, f, ensure_ascii=False)
 print("MusicTrack data JSON is ready!")
